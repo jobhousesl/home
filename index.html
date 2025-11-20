@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JOBHOUSE SERVICES LIMITED</title>
+  <meta name="description" content="JOBHOUSE SERVICES LIMITED - Professional recruitment, outsourcing and HR services." />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    body {
+      background: #f4f6fb;
+      color: #111827;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #111827;
+      color: #fff;
+      padding: 1rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .logo {
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+    }
+
+    nav a {
+      color: #e5e7eb;
+      margin-left: 1rem;
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+
+    nav a:hover {
+      color: #60a5fa;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem 3rem;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 3rem 1rem 2.5rem;
+    }
+
+    .hero h1 {
+      font-size: 2.1rem;
+      margin-bottom: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: #111827;
+    }
+
+    .hero h2 {
+      font-size: 1.15rem;
+      font-weight: 500;
+      color: #4b5563;
+      margin-bottom: 1.25rem;
+    }
+
+    .hero p {
+      max-width: 640px;
+      margin: 0.5rem auto 1.75rem;
+      color: #6b7280;
+      font-size: 0.98rem;
+    }
+
+    .hero-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.7rem 1.6rem;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      text-decoration: none;
+      transition: background 0.2s ease, color 0.2s ease, transform 0.1s ease;
+    }
+
+    .btn-primary {
+      background: #2563eb;
+      color: #fff;
+    }
+
+    .btn-primary:hover {
+      background: #1d4ed8;
+      transform: translateY(-1px);
+    }
+
+    .btn-outline {
+      border: 1px solid #9ca3af;
+      color: #374151;
+      background: #fff;
+    }
+
+    .btn-outline:hover {
+      border-color: #4b5563;
+      color: #111827;
+      transform: translateY(-1px);
+    }
+
+    .section-title {
+      font-size: 1.3rem;
+      margin-bottom: 0.75rem;
+      color: #111827;
+    }
+
+    .muted {
+      color: #6b7280;
+      font-size: 0.95rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 1rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 0.75rem;
+      padding: 1.25rem 1.3rem;
+      box-shadow: 0 8px 15px rgba(15, 23, 42, 0.06);
+      border: 1px solid #e5e7eb;
+    }
+
+    .card h3 {
+      font-size: 1.02rem;
+      margin-bottom: 0.4rem;
+      color: #111827;
+    }
+
+    .card p {
+      font-size: 0.9rem;
+      color: #6b7280;
+    }
+
+    .list {
+      list-style: none;
+      margin-top: 0.4rem;
+    }
+
+    .list li {
+      font-size: 0.9rem;
+      color: #4b5563;
+      margin-bottom: 0.25rem;
+    }
+
+    .list li::before {
+      content: "• ";
+      color: #2563eb;
+      font-weight: 700;
+    }
+
+    .contact {
+      background: #111827;
+      color: #e5e7eb;
+      border-radius: 1rem;
+      padding: 1.75rem 1.5rem;
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 1.5rem;
+      align-items: center;
+    }
+
+    .contact h2 {
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem;
+      color: #f9fafb;
+    }
+
+    .contact p {
+      font-size: 0.92rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .contact-label {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: #9ca3af;
+      margin-bottom: 0.2rem;
+    }
+
+    .contact-value {
+      font-size: 0.95rem;
+      color: #e5e7eb;
+    }
+
+    .contact a {
+      color: #60a5fa;
+      text-decoration: none;
+    }
+
+    .contact a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.8rem;
+      color: #9ca3af;
+      padding: 1.5rem 1rem 2rem;
+    }
+
+    @media (max-width: 720px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.4rem;
+      }
+
+      .hero {
+        padding-top: 2.25rem;
+      }
+
+      .hero h1 {
+        font-size: 1.6rem;
+      }
+
+      .contact {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">JOBHOUSE SERVICES LIMITED</div>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1>JOBHOUSE SERVICES LIMITED</h1>
+      <h2>Recruitment, Outsourcing & HR Support</h2>
+      <p>
+        JOBHOUSE SERVICES LIMITED connects businesses with the right talent and provides reliable outsourcing and HR solutions tailored to your organisation’s needs.
+      </p>
+      <div class="hero-buttons">
+        <a href="#contact" class="btn btn-primary">Request a consultation</a>
+        <a href="#services" class="btn btn-outline">View our services</a>
+      </div>
+    </section>
+
+    <section id="services">
+      <h2 class="section-title">Our core services</h2>
+      <p class="muted">
+        Simple, transparent and professional services designed to support growing businesses and job seekers.
+      </p>
+      <div class="cards">
+        <div class="card">
+          <h3>Recruitment & Talent Search</h3>
+          <p>End‑to‑end hiring support for entry, mid-level and executive roles.</p>
+          <ul class="list">
+            <li>Job profiling and advertising</li>
+            <li>Screening and shortlisting</li>
+            <li>Interview coordination</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Outsourcing & Payroll</h3>
+          <p>We manage your outsourced staff so you can focus on your core business.</p>
+          <ul class="list">
+            <li>Staff outsourcing and supervision</li>
+            <li>Payroll processing</li>
+            <li>Compliance and statutory deductions</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>HR Advisory & Support</h3>
+          <p>Practical HR guidance for small and growing organisations.</p>
+          <ul class="list">
+            <li>HR policies and documentation</li>
+            <li>Performance management setup</li>
+            <li>Basic training and onboarding support</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2 class="section-title">About JOBHOUSE</h2>
+      <p class="muted">
+        JOBHOUSE SERVICES LIMITED is a professional services company focused on matching the right people to the right roles while helping employers streamline HR and outsourcing processes.
+      </p>
+    </section>
+
+    <section id="contact" class="contact">
+      <div>
+        <h2>Contact us</h2>
+        <p>Reach out for recruitment support, outsourcing, or HR advisory.</p>
+      </div>
+      <div>
+        <div>
+          <div class="contact-label">Email</div>
+          <div class="contact-value">
+            <a href="mailto:info@jobhouseservices.com">info@jobhouseservices.com</a>
+          </div>
+        </div>
+        <div style="margin-top: 0.75rem;">
+          <div class="contact-label">Phone / WhatsApp</div>
+          <div class="contact-value">
+            +233 00 000 0000
+          </div>
+        </div>
+        <div style="margin-top: 0.75rem;">
+          <div class="contact-label">Location</div>
+          <div class="contact-value">
+            Accra, Ghana
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    &copy; <span id="year"></span> JOBHOUSE SERVICES LIMITED. All rights reserved.
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
